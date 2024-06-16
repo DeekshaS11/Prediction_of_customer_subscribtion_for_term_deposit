@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Home page</title>
+
+  <style>
+    .center {
+      position: absolute;
+      text-align: center;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: rgba(230,239,245);
+    }
+  </style>
+</head>
+
+
+<body class="center">
+
+  <h1 style="color:rgb(44, 44, 90); font-weight: 700;">
+    <i class="fas fa-ship"></i> DEPOSIT PREDICTOR 
+  </h1>
+
+  <p style="color:rgb(51, 51, 83); font-weight: 700;">
+    will a customer deposit or not?
+  </p>
+
+  <form method="POST">
+    {% csrf_token %}
+
+    <div class="form-group">
+      <input class="form-control" placeholder="Age" required type="text" name="age">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="job" required type="text" name="job">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="marital" required type="text" name="marital">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="education" required type="text" name="education">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="default" type="text" required name="default">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="balance" required type="text" name="balance">
+    </div>
+
+    <div class="form-group">
+      <input class="form-control" placeholder="housing" required type="text" name="housing">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="loan" required type="text" name="loan">
+    </div>
+
+
+    <div class="form-group">
+      <input class="form-control" placeholder="contact" required type="text" name="contact">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" placeholder="day" required type="text" name="day">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" placeholder="month" required type="text" name="month">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" placeholder="duration" required type="text" name="duration">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" placeholder="campaign" required type="text" name="campaign">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" placeholder="p_days" required type="text" name="p_days">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" placeholder="previous" required type="text" name="previous">
+    </div>
+
+    <div class="form-group">
+        <input class="form-control" placeholder="poutcome" required type="text" name="poutcome">
+    </div>
+
+    <input class="btn btn-primary btn-lg btn-block" type="submit" value='Predict'>
+
+  </form>
+  <h4>{{result}}</h4>
+</body>
+
+</html>

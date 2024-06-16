@@ -1,0 +1,36 @@
+<html>
+    <h1> Calculator</h1>
+<form method="POST">
+    {% csrf_token %}
+    <table>
+        <tr>
+
+            <td>
+                first number
+            </td>
+            <td>
+                <input type ="text" name="textfirstnumber">
+            
+            </td>
+            <td>
+                second number
+            </td>
+            <td>
+                <input type ="text" name="textsecondnumber">
+            
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <button type="submit" name="buttonadd">Add</button>
+                <button type="submit" name="buttonsub">Sub</button>
+                <button type="submit" name="buttonmul">Mul</button>
+                <button type="submit" name="buttondiv">Div</button>
+            </td>
+        </tr>
+        <td>
+            {{ result }}
+        </td>
+    </table>
+    </form>
+</html>
